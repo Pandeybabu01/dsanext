@@ -1,0 +1,42 @@
+# DSANext Test Configuration
+# Uses H2 in-memory database — no PostgreSQL required for tests
+
+spring:
+  datasource:
+    url:            jdbc:h2:mem:dsanext_test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    driver-class-name: org.h2.Driver
+    username:       sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto:     create-drop
+    show-sql:       false
+    properties:
+      hibernate:
+        dialect:    org.hibernate.dialect.H2Dialect
+        format_sql: false
+
+  flyway:
+    enabled: false   # Use Hibernate DDL for tests, not Flyway
+
+dsanext:
+  jwt:
+    secret:          dsanext-test-secret-key-minimum-32-characters-long
+    expiration-ms:   3600000    # 1 hour for tests
+    refresh-expiration-ms: 86400000
+
+  upload:
+    profile-image-dir: ./test-uploads/profiles
+
+  cors:
+    allowed-origins: http://localhost:5173
+    allowed-methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+    max-age: 3600
+
+logging:
+  level:
+    root:          WARN
+    com.dsanext:   WARN

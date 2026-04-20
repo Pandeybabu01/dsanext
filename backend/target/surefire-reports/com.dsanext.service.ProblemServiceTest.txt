@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.dsanext.service.ProblemServiceTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.380 s <<< FAILURE! -- in com.dsanext.service.ProblemServiceTest
+com.dsanext.service.ProblemServiceTest.createProblem_success -- Time elapsed: 0.041 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.dsanext.domain.entity.Problem.getId()" is null
+	at com.dsanext.service.ProblemService.createProblem(ProblemService.java:131)
+	at com.dsanext.service.ProblemServiceTest.createProblem_success(ProblemServiceTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.dsanext.service.ProblemServiceTest.createProblem_slugCollision_appendsSuffix -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.dsanext.domain.entity.Problem.getId()" is null
+	at com.dsanext.service.ProblemService.createProblem(ProblemService.java:131)
+	at com.dsanext.service.ProblemServiceTest.createProblem_slugCollision_appendsSuffix(ProblemServiceTest.java:88)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

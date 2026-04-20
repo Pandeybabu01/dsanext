@@ -1,0 +1,10 @@
+com\dsanext\service\ProblemServiceTest.class
+com\dsanext\service\ProgressServiceTest.class
+com\dsanext\TestDataFactory.class
+com\dsanext\service\UserServiceTest.class
+com\dsanext\repository\ProblemRepositoryTest.class
+com\dsanext\controller\ProblemControllerIntegrationTest.class
+com\dsanext\service\AuthServiceTest.class
+com\dsanext\controller\AuthControllerIntegrationTest.class
+com\dsanext\security\SecurityIntegrationTest.class
+com\dsanext\util\SlugUtilsTest.class

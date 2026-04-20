@@ -1,0 +1,41 @@
+# =============================================================
+#  DSANext — Development Profile
+#  Active when: SPRING_PROFILES_ACTIVE=dev
+# =============================================================
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:dsanext_db}
+    username: ${DB_USERNAME:dsanext_user}
+    password: ${DB_PASSWORD:dsanext_pass}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: DSANextDevPool
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+
+
+
+      dsanext:
+        jwt:
+          secret: dsanext-dev-secret-key-at-least-32-characters-long-for-hs256
+          expiration-ms: 86400000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate   # Flyway manages schema; Hibernate only validates
+
+logging:
+  level:
+    com.dsanext: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
+
+dsanext:
+  cors:
+    allowed-origins: http://localhost:5173,http://localhost:3000

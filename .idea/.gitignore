@@ -1,0 +1,45 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignored default folder with query files
+/queries/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+
+# ── Environment & Secrets ────────────────────────────────
+.env
+.env.*
+!.env.example
+*.env
+
+# ── Spring Boot local config (has DB password & JWT secret)
+backend/src/main/resources/application-dev.yml
+backend/src/main/resources/application-prod.yml
+backend/src/main/resources/application-local.yml
+
+# ── Build output ─────────────────────────────────────────
+backend/target/
+frontend/node_modules/
+frontend/dist/
+
+# ── Uploads (user profile images) ────────────────────────
+backend/uploads/
+uploads/
+
+# ── IDE files ─────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+*.class
+
+# ── OS files ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+logs/
