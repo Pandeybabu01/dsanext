@@ -38,7 +38,7 @@ DSANext is a production-grade SaaS DSA Practice Platform where developers can so
 
 ### Prerequisites
 
-- Java 21+, Maven 3.9+
+- Java 17+, Maven 3.9+
 - Node.js 20+ LTS, npm 10+
 - PostgreSQL 15+
 
@@ -69,11 +69,6 @@ bash scripts/start-frontend.sh
 # App: http://localhost:5173
 ```
 
-### 5. Login
-
-| Role | Email | Password |
-|------|-------|----------|
-| Admin | `admin@dsanext.com` | `Admin@123` |
 
 ---
 
