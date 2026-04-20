@@ -125,12 +125,6 @@ dsanext/
 
 ---
 
-## Default Admin Credentials
-
-> ⚠️ Change these immediately after first login!
-
-- **Email:** `admin@dsanext.com`
-- **Password:** `Admin@123`
 
 ---
 
