@@ -1,0 +1,40 @@
+# ── IDE ─────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+
+# ── Environment & Secrets ───────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Backend (Spring Boot) ──────────────────────────
+backend/target/
+backend/uploads/
+*.jar
+
+# Spring Boot config (only if secrets inside)
+backend/src/main/resources/application-dev.yml
+backend/src/main/resources/application-prod.yml
+backend/src/main/resources/application-local.yml
+
+# ── Frontend (React/Vite) ───────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# ── Logs ────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS files ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Others ──────────────────────────────────────────
+shelf/
+workspace.xml
+queries/
+dataSources/
+dataSources.local.xml
+httpRequests/
